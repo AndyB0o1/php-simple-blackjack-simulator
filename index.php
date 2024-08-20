@@ -12,9 +12,9 @@ function getBlackjackWinner(int $pOneScore, int $pTwoScore): string
     $playerTwoIsBust = $pTwoScore > 21;
 
     if ($playerOneIsBust && !$playerTwoIsBust) {
-        return 'Player 2 wins <br />';
+        return 'Player 1 is bust so Player 2 wins!<br />';
     } elseif ($playerTwoIsBust && !$playerOneIsBust) {
-        return 'Player 1 wins <br />';
+        return 'Player 2 is bust so Player 1 wins! <br />';
     }
 
     if ($pOneScore > $pTwoScore) {
