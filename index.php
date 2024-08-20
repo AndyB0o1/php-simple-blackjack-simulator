@@ -65,9 +65,3 @@ echo "Player 1 got $pOneScore points </br>";
 echo "Player 2 got $pTwoScore points </br>";
 
 echo getBlackjackWinner($pOneScore, $pTwoScore);
-
-
-
-
-
-
