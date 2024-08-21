@@ -18,9 +18,9 @@ function getBlackjackWinner(int $pOneScore, int $pTwoScore): string
     }
 
     if ($pOneScore > $pTwoScore) {
-        return 'Player 1 wins <br />';
+        return 'Player 1 wins !<br />';
     } else {
-        return 'Player 2 wins <br />';
+        return 'Player 2 wins !<br />';
     }
 }
 
@@ -51,17 +51,27 @@ $playerTwoCards = array_slice($deck, 0, 2);
 $pOneScore = 0;
 $pTwoScore = 0;
 
+echo "<h1>Blackjack game</h1>";
+
+echo"<h2>Player 1 cards</h2>";
 foreach ($playerOneCards as $card) {
     $pOneScore += $card['score'];
     echo 'Player 1 got a ' . $card['card'];
 }
 
+echo"<h2>Player 2 cards</h2>";
 foreach ($playerTwoCards as $card) {
     $pTwoScore += $card['score'];
     echo 'Player 2 got a ' . $card['card'];
 }
 
+echo"<h2>The scores are:</h2>";
 echo "Player 1 got $pOneScore points </br>";
 echo "Player 2 got $pTwoScore points </br>";
 
+echo"<h2>The final result is....</h2>";
 echo getBlackjackWinner($pOneScore, $pTwoScore);
+echo "<br>";
+echo "<form action='' method='POST'>
+<input type='submit' name='submit' value='Deal again..'>
+</form>";
